@@ -2,63 +2,54 @@ import React from 'react';
 import Heading from '../../components/Heading/Heading';
 import * as LucideIcons from 'lucide-react';
 
+interface MediaItem {
+  title: string;
+  description: string;
+  thumbnail: string;
+  type: 'video' | 'article' | 'press-release';
+  link: string;
+}
+
 const MediaCenter = () => {
-  const mediaItems = [
+  const mediaItems: MediaItem[] = [
     {
-      type: 'video',
-      title: 'Market Outlook 2024',
-      description: 'Our investment team discusses the market outlook for the coming year.',
-      date: 'January 15, 2024',
-      thumbnail: '/images/media-1.jpg',
-      duration: '12:45',
-      views: '1.2K',
-      link: '#'
-    },
-    {
+      title: '1. Internet of Things—a new world and a huge business opportunity',
+      description: 'nternet of Things (IoT) simply means devices communicating with each other and systems using the internet. Not just mobile, computers and TVs but all kinds of devices including fridge, fan, car dashboard,  industrial machines, transportation and logistics, thermometer and dialysis devices—in short all devices that can be connected to the internet.',
+      thumbnail: 'https://images.moneycontrol.com/static-mcnews/2021/06/software-2-770x433.jpg?impolicy=website&width=770&height=431',
       type: 'article',
-      title: 'The Future of Sustainable Investing',
-      description: 'Exploring the growing importance of ESG factors in investment decisions.',
-      date: 'December 5, 2023',
-      thumbnail: '/images/media-2.jpg',
-      readTime: '5 min read',
-      link: '#'
+      link: 'https://www.moneycontrol.com/news/trends/expert-columns/internet-of-things-a-new-world-and-a-huge-business-opportunity-7089921.html'
     },
     {
-      type: 'press-release',
-      title: 'Company Announces New Fund Launch',
-      description: 'We are excited to announce the launch of our new investment fund.',
-      date: 'November 20, 2023',
-      link: '#'
-    },
-    {
-      type: 'video',
-      title: 'Interview with Our CEO',
-      description: 'Exclusive interview discussing our investment philosophy and future plans.',
-      date: 'October 10, 2023',
-      thumbnail: '/images/media-3.jpg',
-      duration: '8:30',
-      views: '2.4K',
-      link: '#'
-    },
-    {
+      title: '2. Multibagger in making? Heres why Moderna share price soared 7 times in 2020',
+      description: 'I am basically from an engineering background but with a little knowledge about bioscience, I would try to explain key terminologies used in the pharma space that are being used in the treatment of COVID.',
+      thumbnail: 'https://images.moneycontrol.com/static-mcnews/2020/05/Moderna-Coronavirus-vacine-770x433.jpg?impolicy=website&width=770&height=431',
       type: 'article',
-      title: 'Understanding Market Volatility',
-      description: 'How to navigate through periods of market uncertainty.',
-      date: 'September 15, 2023',
-      thumbnail: '/images/media-4.jpg',
-      readTime: '4 min read',
-      link: '#'
+      link: 'https://www.moneycontrol.com/news/business/markets/multibagger-in-making-heres-why-moderna-share-price-soared-7-times-in-2020-6245491.html'
     },
     {
-      type: 'press-release',
-      title: 'Quarterly Performance Update',
-      description: 'Q3 2023 performance highlights and portfolio updates.',
-      date: 'September 1, 2023',
-      link: '#'
-    }
+      title: '3. How investment climate has changed after Harshad Mehta scam broke in 1992',
+      description: 'Harshad Mehta was acting as a broker in Ready Forward Deals (RFD) and managed to get money from banks and used it for stock market purchases. He is said to have artificially manipulated stock prices using bank money. Certain shares skyrocketed in a short time. There were also effects of liberalisation, which had just taken off.',
+      thumbnail: 'https://images.moneycontrol.com/static-mcnews/2020/03/Sensex1.Reuters-1-770x433.jpg?impolicy=website&width=770&height=431',
+      type: 'article',
+      link: 'https://www.moneycontrol.com/news/trends/expert-columns/how-investment-climate-has-changed-after-harshad-mehta-scam-broke-in-1992-5946581.html'
+    },
+    {
+      title: '4.India – A 1 trillion manufacturing export market by 2030 ',
+      description: 'Exports have seen tremendous growth over the last two years. India has reached $418 billion of manufacturing exports in the fiscal year 2022 (FY22) with rapid growth over the last 2 years.',
+      thumbnail: 'https://images.livemint.com/img/2022/11/30/600x338/2020-08-31T031403Z_2_LYNXMPEG7U025_RTROPTP_3_CHINA-ECONOMY-PMI_1598881829649_1669800344350_1669800344350.JPG',
+      type: 'article',
+      link: 'https://www.livemint.com/economy/india-a-1-trillion-manufacturing-export-market-by-2030-11669800286004.html'
+    },
+    {
+      title: '5. It is not 2008 like crisis in global markets but volatility could take Nifty50 towards 17K',
+      description: '"It is likely to reach the 17000 or 16800 level. It is advisable to hold some cash to invest in stocks that are part of large megatrends and have strong independent investment theses with high conviction," says Pritam Deuskar, Founder of Wealthyvia.com.',
+      thumbnail: 'https://img.etimg.com/thumb/msid-98629382,width-210,height-158,imgsize-9178,resizemode-75/pritam-.jpg',
+      type: 'article',
+      link: 'https://economictimes.indiatimes.com/markets/expert-view/it-is-not-2008-like-crisis-in-global-markets-but-volatility-could-take-nifty50-towards-17k-pritam-deuskar/articleshow/98629347.cms?from=mdr'
+    },
   ];
 
-  const [activeTab, setActiveTab] = React.useState('all');
+  const [activeTab] = React.useState('all');
 
   const filteredMedia = activeTab === 'all' 
     ? mediaItems 
@@ -74,29 +65,12 @@ const MediaCenter = () => {
   };
 
   return (
-    <div className="px-4 lg:px-10 py-20 bg-gray-50">
+    <div className="px-4 lg:px-10 pt-24 pb-10 md:py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-          <Heading 
+        <Heading 
             title="Media Center" 
-            className="mb-4 md:mb-0"
+            className="mb-10"
           />
-          <div className="flex space-x-2 overflow-x-auto pb-2">
-            {['all', 'video', 'article', 'press-release'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
-                  activeTab === tab
-                    ? 'bg-[#0096cd] text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
-                }`}
-              >
-                {tab.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-              </button>
-            ))}
-          </div>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredMedia.map((item, index) => {
@@ -106,46 +80,23 @@ const MediaCenter = () => {
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
                 {item.thumbnail && (
                   <div className="relative">
+                    <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md">
+                      <Icon className="w-5 h-5 text-[#0096cd]" />
+                    </div>
                     <img 
                       src={item.thumbnail} 
                       alt={item.title}
                       className="w-full h-48 object-cover"
                     />
-                    {item.type === 'video' && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                        <div className="bg-white bg-opacity-80 rounded-full p-3">
-                          <LucideIcons.Play className="w-6 h-6 text-[#0096cd]" />
-                        </div>
-                      </div>
-                    )}
-                    {item.type === 'video' && (
-                      <div className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
-                        {item.duration}
-                      </div>
-                    )}
                   </div>
                 )}
                 <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-500 mb-2">
-                    <Icon className="w-4 h-4 mr-1 text-[#0096cd]" />
-                    <span className="capitalize">
-                      {item.type.split('-').join(' ')}
-                    </span>
-                    <span className="mx-2">•</span>
-                    <span>{item.date}</span>
-                    {item.readTime && (
-                      <>
-                        <span className="mx-2">•</span>
-                        <span>{item.readTime}</span>
-                      </>
-                    )}
-                  </div>
                   <h3 className="text-xl font-semibold mb-2 text-[#002e45] hover:text-[#0096cd] transition-colors">
                     <a href={item.link} className="hover:underline">
                       {item.title}
                     </a>
                   </h3>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
+                  <p className="text-gray-600 mb-4 line-clamp-5">{item.description}</p>
                   <a 
                     href={item.link} 
                     className="text-[#0096cd] font-medium inline-flex items-center hover:underline"
@@ -159,11 +110,11 @@ const MediaCenter = () => {
           })}
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <button className="px-6 py-3 border-2 border-[#0096cd] text-[#0096cd] font-medium rounded-md hover:bg-[#0096cd] hover:text-white transition-colors">
             Load More
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

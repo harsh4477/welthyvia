@@ -1,8 +1,9 @@
 import "./App.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { governanceItems } from "./data/governanceItems";
 import HeroSection from "./components/HeroSection/HeroSection";
 import WhoWeAre from "./pages/WhoWeAre/WhoWeAre";
 import Founders from "./pages/Founders/Founders";
@@ -15,6 +16,9 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import OurHistory from "./pages/OurHistory/OurHistory";
 import CounterSection from "./components/CounterSection/CounterSection";
 import Loading from "./components/Loading/Loading";
+import Heading from "./components/Heading/Heading";
+import GovernanceGrid from "./components/GovernanceGrid/GovernanceGrid";
+import FAQSection from "./components/FAQSection/FAQSection";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +30,7 @@ function App() {
       setIsLoading(true);
       setShowLoader(true);
     };
-    
+
     const handleComplete = () => {
       setIsLoading(false);
       // Start fade out animation
@@ -50,8 +54,18 @@ function App() {
   return (
     <>
       <Header />
-      {showLoader && <Loading className={!isLoading ? 'animate-fadeOut' : 'animate-fadeIn'} />}
-      <main className={`min-h-[calc(100vh-100px)] ${isLoading ? 'opacity-70' : 'opacity-100 transition-opacity duration-300'}`}>
+      {showLoader && (
+        <Loading
+          className={!isLoading ? "animate-fadeOut" : "animate-fadeIn"}
+        />
+      )}
+      <main
+        className={`min-h-[calc(100vh-100px)] ${
+          isLoading
+            ? "opacity-70"
+            : "opacity-100 transition-opacity duration-300"
+        }`}
+      >
         <Routes>
           <Route
             path="/"
@@ -60,7 +74,16 @@ function App() {
                 <HeroSection />
                 <CounterSection />
                 <WhoWeAre />
+                <div className="relative bg-gradient-to-br from-[#002e45] to-[#004d74] text-white py-20">
+                  <Heading title="Our Governance" className="mb-6 md:mb-16 text-white" />
+                  <GovernanceGrid items={governanceItems} />
+                </div>
+                <Strategy />
                 <WhyUs />
+                <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+                  <Heading title="Help & support (FAQ)" className="mb-6 md:mb-16" />
+                  <FAQSection className=""/>
+                </div>
               </div>
             }
           />

@@ -21,9 +21,9 @@ const Heading: React.FC<HeadingProps> = ({
   };
 
   return (
-    <div className={`flex flex-col items-center ${className}`}>
+    <div className={`flex flex-col items-center text-[#002e45] ${className}`}>
       <div className="relative w-fit mb-3">
-        <h2 className={`${sizeClasses[size]} font-semibold mb-2 text-center text-[#002e45]`}>
+        <h2 className={`${sizeClasses[size]} font-semibold mb-2 text-center `}>
           {title}
         </h2>
         <div 

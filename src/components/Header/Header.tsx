@@ -74,9 +74,9 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold">
             <img
-              src="images/logo.png"
-              alt=""
-              className="w-[160px] lg:w-[250px]"
+              src={isHomePage && !isScrolled && !isMenuOpen ? "images/white-logo.png" : "images/logo.png"}
+              alt="Wealthyvia Logo"
+              className={` transition-all duration-300 ${isHomePage && !isScrolled && !isMenuOpen ? "w-[160px] lg:w-[240px]" : "w-[160px] lg:w-[250px]"}`}
             />
           </Link>
 
@@ -194,55 +194,72 @@ const Header = () => {
           <div className="flex flex-col space-y-4">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
-                <div
-                  className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors cursor-pointer"
-                  onClick={() =>
-                    item.subItems
-                      ? setIsSubmenuOpen(!isSubmenuOpen)
-                      : setIsMenuOpen(false)
-                  }
-                >
-                  <Link to={item.href} className="block w-full">
-                    {item.name}
-                  </Link>
+                <div className="w-full">
+                  <div 
+                    className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (item.subItems) {
+                        setIsSubmenuOpen(!isSubmenuOpen);
+                      }
+                    }}
+                  >
+                    <Link
+                      to={item.href}
+                      className="flex-1 text-left"
+                      onClick={(e) => {
+                        if (item.subItems) {
+                          e.preventDefault();
+                        } else {
+                          setIsMenuOpen(false);
+                        }
+                      }}
+                    >
+                      {item.name}
+                    </Link>
+                    {item.subItems && (
+                      <ChevronDown 
+                        className={`transition-transform ${isSubmenuOpen ? 'rotate-180' : ''}`} 
+                        size={18} 
+                      />
+                    )}
+                  </div>
+
+                  {/* Mobile Submenu */}
                   {item.subItems && (
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform duration-200 ${
-                        isSubmenuOpen ? "rotate-180" : ""
-                      }`}
-                      aria-hidden="true"
-                    />
+                    <div className={`ml-4 mt-1 space-y-2 transition-all duration-200 overflow-hidden ${isSubmenuOpen ? 'max-h-96' : 'max-h-0'}`}>
+                      {item.subItems.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="block py-2 px-4 text-sm text-[#002e45] hover:bg-gray-100 rounded-lg transition-colors"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setIsMenuOpen(false);
+                          }}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </div>
-
-                {/* Mobile Submenu */}
-                {item.subItems && isSubmenuOpen && (
-                  <div className="ml-4 mt-1 space-y-2">
-                    {item.subItems.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block py-2 px-4 text-sm text-white hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
-            <NavLink 
-              to="/contact"
-              className={({ isActive }) => 
-                `w-full text-center bg-white text-[#002e45] px-4 py-2 rounded font-medium capitalize transition-colors ${
-                  isActive ? 'ring-2 ring-white/50' : ''
-                }`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </NavLink>
+            
+            <div className="mt-2">
+              <NavLink 
+                to="/contact"
+                className={({ isActive }) => 
+                  `block w-full text-center bg-white text-[#002e45] px-4 py-2 rounded font-medium capitalize transition-colors ${
+                    isActive ? 'ring-2 ring-white/50' : ''
+                  }`
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="px-4 lg:px-10 py-20 bg-gray-50">
+    <div className="px-4 lg:px-10 pt-24 pb-10 md:py-20 bg-gray-50">
       <div className="flex flex-col">
         <Heading title="Get in Touch" className="" />
 

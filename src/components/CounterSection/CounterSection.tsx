@@ -30,7 +30,7 @@ const CounterSection = () => {
   return (
     <section ref={sectionRef} className="relative py-16 bg-[#002e45]">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           <div className="p-6">
             <Counter end={500} duration={2000} suffix="+" className="text-white" startAnimation={isVisible} />
             <p className="mt-2 text-gray-300">Company meeting per year</p>

@@ -12,11 +12,11 @@ const HeroSection = () => {
       </div>
       
       <div className="z-10 md:max-w-2xl flex flex-col items-center justify-center">
-        <h1 className="text-2xl md:text-5xl font-semibold mb-3 leading-tight">
-          Crafting legacy together
+        <h1 className="text-2xl md:text-5xl font-semibold mb-3 leading-tight capitalize">
+          Crafting Legacy Together
         </h1>
         <p className="text-base md:text-lg mb-8 text-center">
-          At Wealthyvia, we blend tradition with innovation, bridging proven investing with future-focused technology to build transformative, long-term growth.
+          At Wealthyvia, we combine traditional investment wisdom with future-ready technology to deliver sustained, transformative growth.
         </p>
       </div>
     </div>

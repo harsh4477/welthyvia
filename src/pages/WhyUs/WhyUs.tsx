@@ -8,6 +8,7 @@ import {
   Zap,
   Clock,
 } from "lucide-react";
+import Heading from "../../components/Heading/Heading";
 
 const features = [
   {
@@ -65,17 +66,19 @@ const WhyUs = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-gradient-to-br from-[#002e45] to-[#004d74] pt-24 pb-10 md:py-20">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-[#002e45] to-[#004d74] text-white pt-24 pb-10 md:py-20">
+      <div className="relative  text-white pb-10">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/images/pattern.png')] bg-cover mix-blend-overlay"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+             <Heading title="Why Choose Wealthyvia" className="mb-6 md:mb-16 text-white" />
+
+            {/* <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Why Choose <span className="text-[#0096cd]">Wealthyvia</span>
-            </h1>
+            </h1> */}
             <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
               We combine deep market expertise with innovative strategies to
               deliver consistent, risk-adjusted returns for our clients.
@@ -84,7 +87,7 @@ const WhyUs = () => {
         </div>
       </div>
 
-      <div className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (

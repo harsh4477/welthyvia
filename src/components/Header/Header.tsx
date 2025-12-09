@@ -43,6 +43,7 @@ const Header = () => {
     { name: "Why us", href: "/why-us" },
     { name: "Resources", href: "/resources" },
     { name: "Media centre", href: "/media-center" },
+    { name: "Contact", href: "/contact" },
   ];
 
   // Close submenu when clicking outside
@@ -76,7 +77,7 @@ const Header = () => {
             <img
               src={isHomePage && !isScrolled && !isMenuOpen ? "images/white-logo.png" : "images/logo.png"}
               alt="Wealthyvia Logo"
-              className={` transition-all duration-300 ${isHomePage && !isScrolled && !isMenuOpen ? "w-[160px] lg:w-[240px]" : "w-[160px] lg:w-[250px]"}`}
+              className={` transition-all duration-300 ${isHomePage && !isScrolled && !isMenuOpen ? "w-[160px] lg:w-[210px]" : "w-[150px] lg:w-[220px]"}`}
             />
           </Link>
 
@@ -158,7 +159,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <NavLink
+            {/* <NavLink
               to="/contact"
               className={({ isActive }) => 
                 `px-4 py-2 rounded font-medium capitalize cursor-pointer border transition-all duration-300 ease-in-out ${
@@ -173,7 +174,7 @@ const Header = () => {
               }
             >
               Contact
-            </NavLink>
+            </NavLink> */}
           </nav>
           </div>
 
@@ -247,7 +248,7 @@ const Header = () => {
               </div>
             ))}
             
-            <div className="mt-2">
+            {/* <div className="mt-2">
               <NavLink 
                 to="/contact"
                 className={({ isActive }) => 
@@ -259,7 +260,7 @@ const Header = () => {
               >
                 Contact
               </NavLink>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

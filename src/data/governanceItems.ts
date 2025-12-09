@@ -2,26 +2,26 @@ import type { GovernanceItem } from "../components/GovernanceGrid/GovernanceGrid
 
 export const governanceItems: GovernanceItem[] = [
   {
-    iconName: "Shield",
+    iconName: "target",
     title: "Accountability",
     description:
-      "Executive management set strategic targets and are accountable for it. In turn, we are accountable to the stakeholders.",
+      "Our leadership team is accountable for achieving defined investment objectives, maintaining regulatory discipline, and upholding the highest fiduciary standards. All actions are guided by a strong commitment to investor interests and long-term value creation.",
   },
   {
-    iconName: "Users",
+    iconName: "users",
     title: "Responsibility",
-    description: "The clear separation and delegation of authority.",
+    description: "We operate with a clear separation of roles, structured decision-making protocols, and strong internal controls. This ensures responsible execution of our strategies and reinforces a culture of integrity and operational rigor.",
   },
   {
-    iconName: "Target",
+    iconName: "file-text",
     title: "Transparency and disclosure",
     description:
-      "Stakeholders have clear and complete information of the financial calls which we take, so they can assess the Company's performance and situation.",
+      "We follow a clarity-first approach in all communications. Investors receive timely, accurate and comprehensive information on performance, risk, portfolio developments and key decisions, enabling consistent and well-informed evaluation.",
   },
   {
-    iconName: "ShieldCheck",
+    iconName: "shield-check",
     title: "Investor Protection",
     description:
-      "All investor interests are safeguarded through robust processes, controls, and conflict-free decision-making.",
+      "Investor interests are protected through a robust governance framework, independent oversight, disciplined compliance practices and a conflict-free decision environment. This foundation ensures fairness, stability, and confidence in all aspects of our operations.",
   },
 ];

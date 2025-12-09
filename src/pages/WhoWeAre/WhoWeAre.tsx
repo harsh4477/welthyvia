@@ -20,33 +20,36 @@ const WhoWeAre = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          
+
           <div className="w-full lg:w-1/2 space-y-6">
             <p className="text-base text-gray-700 leading-relaxed">
-              We are a SEBI-registered AIF Category III Fund (Registration No.
-              IN/AIF3/25-26/1901) headquartered in Mumbai, dedicated to
-              delivering high-quality public market investment solutions to
-              ultra-high-net-worth individuals (UHNIs), family offices,
-              institutions, and fund of funds.
+              <b className="font-semibold">
+                We are a SEBI-registered AIF Category III Fund (Registration No.
+                IN/AIF3/25-26/1901) headquartered in Mumbai
+              </b>
+              , dedicated to delivering high-quality public market investment
+              solutions to ultra-high-net-worth individuals (UHNIs), family
+              offices, institutions, and fund of funds.
             </p>
             <p className="text-base text-gray-700 leading-relaxed">
-              Our investment philosophy centers on the conviction that India's
+              Our Investment Philosophy centers on the conviction that India's
               next wave of industry leaders is emerging today among mid-sized
               companies. As the Indian economy undergoes structural
               transformation driven by powerful megatrends, formalization,
               premiumization, digital acceleration, manufacturing resurgence,
-              and rising domestic consumption, we focus on identifying
-              businesses best positioned to benefit from these long-term shifts.
+              and rising domestic consumption, We target businesses positioned
+              at the forefront of enduring market shifts.
             </p>
             <p className="text-base text-gray-700 leading-relaxed">
-              With a rigorous research-driven approach, disciplined risk
-              management, and deep market expertise, we seek to invest in
-              mid-sized enterprises that exhibit scalable business models,
-              strong governance, and the potential to compound value over time.
+              Our Investment Approach is based on a rigorous research-driven
+              approach, disciplined risk management, and deep market expertise,
+              we seek to invest in mid-sized enterprises that exhibit scalable 
+              <b className="font-semibold"> Business models, strong governance, and the potential to compound
+              value over time</b>.
             </p>
             <p className="text-base text-gray-700 leading-relaxed">
               Guided by institutional-grade processes and a commitment to
-              excellence, we aim to create sustainable, long-term wealth for our
+              excellence, we aim to <b className="font-semibold">Create sustainable, long-term wealth</b> for our
               investors while contributing to the growth story of India's most
               promising companies.
             </p>

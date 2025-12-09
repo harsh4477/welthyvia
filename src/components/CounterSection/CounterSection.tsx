@@ -36,16 +36,16 @@ const CounterSection = () => {
             <p className="mt-2 text-gray-300">Company meeting per year</p>
           </div>
           <div className="p-6">
-            <Counter end={50} duration={2000} className="text-white" startAnimation={isVisible} />
+            <Counter end={75} duration={2000} suffix="+" className="text-white" startAnimation={isVisible} />
             <p className="mt-2 text-gray-300">Years of experience</p>
           </div>
           <div className="p-6">
-            <Counter end={5000} duration={2000} suffix="+" className="text-white" startAnimation={isVisible} />
+            <Counter end={25000} duration={2000} suffix="+" className="text-white" startAnimation={isVisible} />
             <p className="mt-2 text-gray-300">Cumulative Research Hours</p>
           </div>
           <div className="p-6">
-            <Counter end={10} duration={2000} className="text-white" startAnimation={isVisible} />
-            <p className="mt-2 text-gray-300">Client coverage countries</p>
+            <Counter end={25} duration={2000} suffix="+" className="text-white" startAnimation={isVisible} />
+            <p className="mt-2 text-gray-300">Footprints Across Geographies </p>
           </div>
         </div>
       </div>

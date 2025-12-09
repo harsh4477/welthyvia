@@ -3,23 +3,39 @@ import Heading from "../../components/Heading/Heading";
 const Founders = () => {
   const founders = [
     {
-      name: "Pritam Deuskar",
-      role: "Founder and CIO, Wealthyvia Ventures",
-      experience:
-        "12+ years of experience in institutional research and business analysis",
-      bio: "Pritam has extensive proficiency in identifying early-stage small and mid-cap multibagger opportunities has been developed through years of rigorous market study, bottom-up research, and deep sector-level analysis. This capability is evidenced by the achievement of a sustained CAGR exceeding 32% from 2015 to 2024, delivered through a disciplined, conviction-driven investment methodology that emphasizes fundamental strength, governance quality, and long-term scalability. Professional experience includes advising prominent institutions such as Reliance, Ernst & Young, and Bonanza on strategic investment decisions, research frameworks, and market positioning. Analytical perspectives and market commentary have been featured in leading financial media outlets including Dalal Street Investment Journal, CNBC, and Moneycontrol, underscoring industry recognition for research depth and market foresight. Supported by a postgraduate specialization in Portfolio Management and SEBI NISM certification he demonstrates the right skill set to generate alpha.",
-      image: "images/Pritam Deuskar.jpg",
-      linkedinLink:
-        "https://www.linkedin.com/in/pritam-deuskar-346b42245/?isSelfProfile=false",
-    },
-    {
       name: "Krushali Jagiwala",
       role: "Co-Founder and CEO, Wealthyvia Ventures",
       experience:
         "8+ years of fundraising experience from UHNIs, FPIs/FIIs, and Family Offices in India and abroad",
-      bio: "Professional experience includes raising and managing more than USD 30 million across private and public Indian companies, with a strong track record of sourcing and channelizing capital from European, UAE, and Singapore investor markets. Expertise spans the full spectrum of alternative investment product design, structuring, and strategic marketing, with a focus on creating institutional-quality offerings tailored to sophisticated investor needs. The academic foundation includes an MBA in Finance from Veer Narmad South Gujarat University (VNSGU), Surat, providing comprehensive grounding in capital markets, financial analysis, and investment management. This combined experience reflects a deep understanding of global investor behaviour, product innovation, and the execution capabilities required to build and scale high-quality investment platforms.",
+      bio: [
+        "8+ years of fundraising experience from UHNIs, FPIs/FIIs, and Family Offices",
+        "Raised over USD 30 million for Indian companies",
+        "Expertise in alternative investment product design and structuring",
+        "Strong track record in European, UAE, and Singapore investor markets",
+        "MBA in Finance from Veer Narmad South Gujarat University",
+        "Specializes in capital markets, financial analysis, and investment management",
+        "Focus on creating institutional-quality investment offerings"
+      ],
       image: "images/Krushali Jagiwala.jpg",
       linkedinLink: "https://www.linkedin.com/in/krushali-jagiwala-13b404b4/",
+    },
+    {
+      name: "Pritam Deuskar",
+      role: "Founder and CIO, Wealthyvia Ventures",
+      experience:
+        "12+ years of experience in institutional research and business analysis",
+      bio: [
+        "Extensive proficiency in identifying early-stage small and mid-cap multibagger opportunities",
+        "12+ years of experience in institutional research and business analysis",
+        "Achieved a sustained CAGR exceeding 32% from 2015 to 2024",
+        "Expertise in fundamental analysis, governance quality, and long-term scalability",
+        "Professional experience with Ernst & Young",
+        "Featured in Dalal Street Investment Journal, CNBC, and Moneycontrol",
+        "Postgraduate specialization in Portfolio Management and SEBI NISM certified"
+      ],
+      image: "images/Pritam Deuskar.jpg",
+      linkedinLink:
+        "https://www.linkedin.com/in/pritam-deuskar-346b42245/?isSelfProfile=false",
     },
   ];
 
@@ -47,7 +63,7 @@ const Founders = () => {
                   <img
                     src={founder.image}
                     alt={founder.name}
-                    className="w-full h-full object-cover object-[0px_-70px] transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                    className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${founder.name === 'Pritam Deuskar' ? 'object-[0px_-70px]' : 'object-[0px_0px]'}`}
                   />
                 </div>
                 <a
@@ -79,9 +95,11 @@ const Founders = () => {
                 <p className="text-gray-500 mb-4 text-sm">
                   {founder.experience}
                 </p>
-                <p className="text-gray-800 leading-relaxed text-base">
-                  {founder.bio}
-                </p>
+                <ul className="list-disc pl-5 space-y-2 text-gray-800">
+                  {founder.bio.map((point, i) => (
+                    <li key={i} className="leading-relaxed">{point}</li>
+                  ))}
+                </ul>
 
               </div>
             </div>

@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { governanceItems } from "./data/governanceItems";
@@ -59,6 +60,7 @@ function App() {
           className={!isLoading ? "animate-fadeOut" : "animate-fadeIn"}
         />
       )}
+      <ScrollToTop />
       <main
         className={`min-h-[calc(100vh-100px)] ${
           isLoading

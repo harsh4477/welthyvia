@@ -31,6 +31,9 @@ const WhoWeAre = () => {
               solutions to ultra-high-net-worth individuals (UHNIs), family
               offices, institutions, and fund of funds.
             </p>
+            <h4 className="text-lg font-semibold mb-2">
+              Our Investment Philosophy
+            </h4>
             <p className="text-base text-gray-700 leading-relaxed">
               Our Investment Philosophy centers on the conviction that India's
               next wave of industry leaders is emerging today among mid-sized
@@ -40,18 +43,29 @@ const WhoWeAre = () => {
               and rising domestic consumption, We target businesses positioned
               at the forefront of enduring market shifts.
             </p>
+            <h4 className="text-lg font-semibold mb-2">
+              Our Investment Approach
+            </h4>
             <p className="text-base text-gray-700 leading-relaxed">
-              Our Investment Approach is based on a rigorous research-driven
-              approach, disciplined risk management, and deep market expertise,
-              we seek to invest in mid-sized enterprises that exhibit scalable 
-              <b className="font-semibold"> Business models, strong governance, and the potential to compound
-              value over time</b>.
+              With a rigorous research-driven approach, disciplined risk
+              management, and deep market expertise, we seek to invest in
+              mid-sized enterprises that exhibit 
+              <b className="font-semibold">
+                {" "}
+                Scalable business models, Strong governance, and the Potential to
+                compound value over time
+              </b>
+              .
             </p>
+            <h4 className="text-lg font-semibold mb-2">Our commitment</h4>
             <p className="text-base text-gray-700 leading-relaxed">
               Guided by institutional-grade processes and a commitment to
-              excellence, we aim to <b className="font-semibold">Create sustainable, long-term wealth</b> for our
-              investors while contributing to the growth story of India's most
-              promising companies.
+              excellence, we aim to{" "}
+              <b className="font-semibold">
+                Create sustainable, long-term wealth
+              </b>{" "}
+              for our investors while contributing to the growth story of
+              India's most promising companies.
             </p>
           </div>
         </div>

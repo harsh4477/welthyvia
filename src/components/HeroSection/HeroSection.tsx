@@ -16,7 +16,7 @@ const HeroSection = () => {
           Crafting Legacy Together
         </h1>
         <p className="text-base md:text-lg mb-8 text-center">
-          At Wealthyvia, we combine traditional investment wisdom with future-ready technology to deliver sustained, transformative growth.
+          At Wealthyvia, we combine traditional investment wisdom with future ready technology to deliver sustained, transformative growth.
         </p>
       </div>
     </div>

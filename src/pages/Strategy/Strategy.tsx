@@ -29,12 +29,11 @@ const Strategy = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white pt-24 pb-10 md:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-gradient-to-b from-gray-50 to-white ">
+      <div className="max-w-7xl mx-auto pt-24 pb-10 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Heading title="Strategic Investment Framework" className="mb-6" />
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition-transform duration-500">
@@ -44,7 +43,7 @@ const Strategy = () => {
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-6 text-white">
+              <div className="absolute bottom-0 left-0 p-6 text-white w-full text-center">
                 <h3 className="text-2xl font-bold mb-2">
                   Wealthyvia Small GIANTS Fund
                 </h3>
@@ -78,9 +77,10 @@ const Strategy = () => {
             </div>
           </div>
         </div>
-
-        <div className="mt-20">
-          <Heading title="Our Investment Pillars" className="mb-6" />
+      </div>
+      <div className="pt-24 pb-10 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#002e45] to-[#004d74]">
+        <div className="max-w-7xl mx-auto ">
+          <Heading title="Our Investment Pillars" className="mb-6 text-white" />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {investmentStrategies.map((strategy, index) => (
               <div

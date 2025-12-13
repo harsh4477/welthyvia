@@ -4,7 +4,7 @@ const Founders = () => {
   const founders = [
     {
       name: "Krushali Jagiwala",
-      role: "Co-Founder and CEO, Wealthyvia Ventures",
+      role: "CEO and Co-Founder, Wealthyvia Ventures",
       experience:
         "8+ years of fundraising experience from UHNIs, FPIs/FIIs, and Family Offices in India and abroad",
       bio: [
@@ -21,7 +21,7 @@ const Founders = () => {
     },
     {
       name: "Pritam Deuskar",
-      role: "Founder and CIO, Wealthyvia Ventures",
+      role: "CIO and Founder, Wealthyvia Ventures",
       experience:
         "12+ years of experience in institutional research and business analysis",
       bio: [

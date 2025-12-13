@@ -11,7 +11,7 @@ const ContactUs = () => {
   return (
     <div className="px-4 lg:px-10 pt-24 pb-10 md:py-20 bg-gray-50">
       <div className="flex flex-col">
-        <Heading title="Get in Touch" className="" />
+        <Heading title="Get in Touch" className="mb-6" />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-stretch">
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
@@ -48,7 +48,7 @@ const ContactUs = () => {
                   <h4 className="font-medium text-gray-800">Email Us</h4>
                   <a
                     href="mailto:invest@wealthyvia.com"
-                    className="text-blue-600 hover:underline"
+                    className="text-gray-600 hover:text-blue-600 hover:underline"
                   >
                     invest@wealthyvia.com
                   </a>
@@ -62,10 +62,10 @@ const ContactUs = () => {
                 <div>
                   <h4 className="font-medium text-gray-800">Call Us</h4>
                   <a
-                    href="tel:+918369508540"
+                    href="tel:+919967094399"
                     className="text-gray-600 hover:text-blue-600"
                   >
-                    +918369508540
+                   +919967094399
                   </a>
                 </div>
               </div>

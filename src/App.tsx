@@ -62,7 +62,7 @@ function App() {
       )}
       <ScrollToTop />
       <main
-        className={`min-h-[calc(100vh-100px)] ${
+        className={`min-h-[calc(100vh-135px)] ${
           isLoading
             ? "opacity-70"
             : "opacity-100 transition-opacity duration-300"
@@ -81,6 +81,7 @@ function App() {
                   <GovernanceGrid items={governanceItems} />
                 </div>
                 <Strategy />
+                <OurHistory />
                 <WhyUs />
                 <div className="relative py-20 px-4 sm:px-6 lg:px-8">
                   <Heading title="Help & support (FAQ)" className="mb-6 md:mb-16" />

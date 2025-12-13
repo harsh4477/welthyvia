@@ -16,42 +16,42 @@ const features = [
     description:
       "Delivering outperformance across market cycles through disciplined research and conviction-led investing.",
     icon: <TrendingUp className="h-8 w-8" />,
-    color: "from-blue-500 to-cyan-400",
+    // color: "#002e45",
   },
   {
     title: "Proprietary Screening",
     description:
       "Advanced analytics and screening tools to identify high-potential investment opportunities.",
     icon: <BarChart2 className="h-8 w-8" />,
-    color: "from-purple-500 to-pink-500",
+    // color: "#002e45",
   },
   {
     title: "In-Depth Analysis",
     description:
       "Comprehensive due diligence including management evaluations and on-ground research.",
     icon: <Shield className="h-8 w-8" />,
-    color: "from-amber-500 to-yellow-400",
+    // color: "#002e45",
   },
   {
     title: "Multibagger Strategy",
     description:
       "Proven approach to identifying and capitalizing on high-growth investment opportunities.",
     icon: <Zap className="h-8 w-8" />,
-    color: "from-green-500 to-emerald-400",
+    // color: "#002e45",
   },
   {
     title: "Risk Management",
     description:
       "Structured framework to protect capital while maximizing returns.",
     icon: <Target className="h-8 w-8" />,
-    color: "from-rose-500 to-pink-500",
+    // color: "#002e45",
   },
   {
     title: "Seamless Experience",
     description:
       "Streamlined investing process with focus on liquidity and client convenience.",
     icon: <Clock className="h-8 w-8" />,
-    color: "from-indigo-500 to-blue-400",
+    // color: "#002e45",
   },
 ];
 
@@ -74,7 +74,7 @@ const WhyUs = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-4xl mx-auto">
-             <Heading title="Why Choose Wealthyvia" className="mb-6 md:mb-16 text-white" />
+             <Heading title="Why Choose Wealthyvia" className="mb-6 text-white" />
 
             {/* <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Why Choose <span className="text-[#0096cd]">Wealthyvia</span>
@@ -101,11 +101,11 @@ const WhyUs = () => {
                 onMouseEnter={() => setActiveIndex(index)}
               >
                 <div
-                  className={`absolute -right-6 -top-6 w-32 h-32 rounded-full bg-gradient-to-br ${feature.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}
+                  className={`absolute -right-6 -top-6 w-32 h-32 rounded-full bg-gradient-to-br bg-blue-50 group-hover:bg-blue-100 transition-opacity duration-300`}
                 ></div>
                 <div className="relative z-10">
                   <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} text-white flex items-center justify-center mb-6`}
+                    className={`w-14 h-14 rounded-xl bg-[#002e45] text-white flex items-center justify-center mb-6`}
                   >
                     {feature.icon}
                   </div>

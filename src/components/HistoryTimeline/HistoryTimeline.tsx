@@ -77,7 +77,7 @@ const HistoryTimeline = () => {
   ];
 
   return (
-    <div className="w-full relative p-4 md:p-6 relative before:content-[''] before:absolute before:top-6 md:before:top-9 before:left-0 before:w-full before:h-0.5 before:bg-gray-200">
+    <div className="w-full relative p-4 md:p-6 before:content-[''] before:absolute before:top-6 md:before:top-9 before:left-0 before:w-full before:h-0.5 before:bg-gray-200">
       {/* Left Navigation Button - Hidden on mobile, shown on md and up */}
       <button
         onClick={() => scroll("left")}
